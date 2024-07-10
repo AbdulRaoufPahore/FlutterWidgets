@@ -14,14 +14,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.white, size: 30),
+        iconTheme: const IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.blue,
-        title: Text(
+        title: const Text(
           "Code With 4546",
           style: TextStyle(
               fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.only(right: 10),
             child: Icon(
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: Text(
           "Pressed the button $count times",
-          style: TextStyle(color: Colors.black, fontSize: 20),
+          style: const TextStyle(color: Colors.black, fontSize: 20),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -43,14 +43,14 @@ class _HomeScreenState extends State<HomeScreen> {
             count++;
           });
         },
-        child: Icon(
+        backgroundColor: Colors.blue,
+        child: const Icon(
           Icons.add,
           size: 30,
           color: Colors.white,
         ),
-        backgroundColor: Colors.blue,
       ),
-      drawer: Drawer(
+      drawer: const Drawer(
         backgroundColor: Colors.blue,
         child: Column(
           children: [
