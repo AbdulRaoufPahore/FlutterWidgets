@@ -32,9 +32,30 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Center(
-        child: Text(
-          "Pressed the button $count times",
-          style: const TextStyle(color: Colors.black, fontSize: 20),
+        child: Container(
+          width: 500,
+          height: 120,
+          transform: Matrix4.rotationZ(0.1),
+          margin: EdgeInsets.all(30),
+          alignment: Alignment.center,
+          // color: Colors.blue,
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.amber,
+                  offset: Offset(5, 5),
+                )
+              ],
+              color: Colors.blue,
+              border: Border.all(
+                color: Colors.black,
+                width: 3,
+              ),
+              borderRadius: BorderRadius.circular(20)),
+          child: Text(
+            "Pressed the button $count times",
+            style: const TextStyle(color: Colors.white, fontSize: 22),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -158,5 +179,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+    // return Scaffold();
   }
 }
